@@ -1,0 +1,22 @@
+{
+    "name": "klvtz/janrain-union",
+    "description": "A janrain interfacing method for third-party plugins",
+    "type": "wordpress-plugin",
+    "require": {
+		"php": ">=5.4.0",
+        "composer/installers": "~1.0",
+		"guzzlehttp/guzzle": "^6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Page",
+            "email": "justin.page@qfor.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Janrain\\Union\\": ""
+		}
+	}
+}
