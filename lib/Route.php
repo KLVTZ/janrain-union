@@ -1,8 +1,9 @@
 <?php namespace Janrain\Union\Lib;
 
+use Janrain\Union\Lib\Controller;
+
 class Route
 {
-	
 	/**
 	 * Create routes for janrain token service
 	 */
@@ -17,23 +18,47 @@ class Route
 	{
 		$janrain = get_query_var('janrain');
 
-		var_dump($janrain); die();
+		if ($janrain)
+			return Controller::serve($janrain);
+
+		return $template;
 	}
 
-	public function rewriteRules()
-	{
-		add_rewrite_rule('janrain/(.+)?$', 'index.php?janrain=$matches[1]', 'top');
-		add_rewrite_tag('%janrain%', '([^&]+)');
-	}
 
+	/**
+	 * Grab the current query via HTTP request
+	 *
+	 * @param Array $args arguments
+	 * @return Array $args
+	 */
 	public function query($args)
 	{
-		return $args[] = 'janrain';
+		array_push($args, 'janrain');
+		return $args;
 	}
 
+	/**
+	 * Flushes current rules via rewrite and hook
+	 *
+	 * @param void
+	 * @return void
+	 */
 	public function flushRules()
 	{
 		$this->rewriteRules();
 		flush_rewrite_rules();	
 	}
+
+	/**
+	 * Add regex to currennt rewrite rules
+	 *
+	 * @param void
+	 * @return void
+	 */
+	public function rewriteRules()
+	{
+		add_rewrite_rule('janrain/(.*?)/?$', 'index.php?janrain=$matches[1]', 'top');
+		add_rewrite_tag('%janrain%', '([^&]+)');
+	}
+
 }
