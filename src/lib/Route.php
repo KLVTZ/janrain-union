@@ -1,11 +1,24 @@
 <?php namespace Janrain\Union\Lib;
 
+/**
+ * Registers route(s) for Janrain Signin
+ *
+ * @package Janrain\Union
+ * @author  (c) Justin Page <justin.page@qfor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 use Janrain\Union\Lib\Controller;
 
 class Route
 {
 	/**
 	 * Create routes for janrain token service
+	 *
+	 * @param void
+	 * @return void
 	 */
 	public function __construct()
 	{
@@ -14,6 +27,12 @@ class Route
 		add_filter('query_vars', [$this, 'query']);
 	}
 
+	/**
+	 * Use controller to serve template base on query 
+	 *
+	 * @param String $request action
+	 * @return Resource $template of file
+	 */
 	public function template($template)
 	{
 		$janrain = get_query_var('janrain');
@@ -23,7 +42,6 @@ class Route
 
 		return $template;
 	}
-
 
 	/**
 	 * Grab the current query via HTTP request
@@ -60,5 +78,4 @@ class Route
 		add_rewrite_rule('janrain/(.*?)/?$', 'index.php?janrain=$matches[1]', 'top');
 		add_rewrite_tag('%janrain%', '([^&]+)');
 	}
-
 }
