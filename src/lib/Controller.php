@@ -22,11 +22,11 @@ class Controller
 	{
 		switch ($request) {
 			case 'login':
-				return dirname(__DIR__) . '/src/resources/login.php';
+				return dirname(__DIR__) . '/resources/login.php';
 			case 'logout':
-				return dirname(__DIR__) . '/src/resources/logout.php';
+				return dirname(__DIR__) . '/resources/logout.php';
 			case 'update':
-				return dirname(__DIR__) . '/src/resources/update.php';
+				return dirname(__DIR__) . '/resources/update.php';
 		}
 	}
 }
