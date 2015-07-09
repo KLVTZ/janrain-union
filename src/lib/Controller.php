@@ -22,11 +22,13 @@ class Controller
 	{
 		switch ($request) {
 			case 'login':
-				return dirname(__DIR__) . '/resources/login.php';
+				return JANRAIN_UNION_DIR . '/src/resources/login.php';
 			case 'logout':
-				return dirname(__DIR__) . '/resources/logout.php';
+				return JANRAIN_UNION_DIR . '/src/resources/logout.php';
 			case 'update':
-				return dirname(__DIR__) . '/resources/update.php';
+				return JANRAIN_UNION_DIR . '/src/resources/update.php';
+			case 'receive':
+				return JANRAIN_UNION_DIR . '/src/bin/receive.html';
 		}
 	}
 }

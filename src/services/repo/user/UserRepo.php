@@ -30,7 +30,6 @@ class UserRepo implements UserRepoInterface
 				'apiKey' => getenv ('SSO_API_KEY')
 			],
 		]);
-		$user = json_decode($response->getBody());
-		var_dump($user); die();
+		return json_decode($response->getBody());
    	}
 }
