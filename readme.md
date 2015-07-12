@@ -31,5 +31,6 @@ Checklist
 - Create proper widget
 - Maintain session
 - Interface with livefyre plugin
+- Unit testing
 
 [se]: https://github.com/janrain/se-demos
