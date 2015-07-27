@@ -1,3 +1,12 @@
-<?php 
+<html>
+	<head>
+		<script>
+			(function() {
+				localStorage.removeItem("janrainCaptureToken");
+			}() );
+		</script>
+	</head>
+	<body>you were logged out.</body>
+</html>
 
-echo 'You logout! You said you would never leave #sadButGettingThroughIt';
+
