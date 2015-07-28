@@ -21,8 +21,10 @@ is actually creating a widget that takes advantage of Janrain's current API.
 Right now, we are using [Janrain demo products][se] as a basis for request.
 
 Biggest issue is creating a widget that interacts with federate (SSO service)
-and maintains these sessions throughout a user's lifetime. Goal is to reach out
-for help.
+and maintains these sessions throughout a user's lifetime. 
+
+We reached out to janrain and have a scheduled technical meeting this Friday.
+Hopefully we get the information we need in order to progress with this ><
 
 Checklist
 ---------
