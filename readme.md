@@ -23,8 +23,12 @@ Right now, we are using [Janrain demo products][se] as a basis for request.
 Biggest issue is creating a widget that interacts with federate (SSO service)
 and maintains these sessions throughout a user's lifetime. 
 
-We reached out to janrain and have a scheduled technical meeting this Friday.
-Hopefully we get the information we need in order to progress with this ><
+Update
+------
+JanRain will generate the provision widget necessary for our use. A future goal
+would be to use this as middleman api to login. That is, the widget will still
+leverage this as a token generation, but will provide an API for maintaining
+session.
 
 Checklist
 ---------
