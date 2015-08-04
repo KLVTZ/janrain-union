@@ -29,13 +29,13 @@ class Controller
     {
         switch ($request) {
         case 'login':
-            return '../resources/login.php';
+            return JANRAIN_UNION_DIR . '/src/resources/login.php';
         case 'logout':
-            return '../resources/logout.php';
+            return JANRAIN_UNION_DIR . '/src/resources/logout.php';
         case 'update':
-            return '../resources/update.php';
+            return JANRAIN_UNION_DIR . '/src/resources/update.php';
         case 'receive':
-            return '../bin/receive.html';
+            return JANRAIN_UNION_DIR . '/src/bin/receive.html';
         }
     }
 }

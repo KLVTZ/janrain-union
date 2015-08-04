@@ -9,4 +9,5 @@ Plugin URI: http://www.qfor.com
 Text Domain: janrain-union
 */
 
-require_once __DIR__ . '/src/' . 'JanrainUnion.php';
+define('JANRAIN_UNION_DIR', __DIR__);
+require_once JANRAIN_UNION_DIR . '/src/' . 'JanrainUnion.php';
