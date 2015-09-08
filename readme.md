@@ -14,14 +14,8 @@ Goals
 
 Progress
 --------
-The following service is dependant on a front-end widget. This is a work in
-progress on implementing this on the front-end. Current strategy is to have
-service object queue the necessary dependancies on plugin load. The other task
-is actually creating a widget that takes advantage of Janrain's current API.
-Right now, we are using [Janrain demo products][se] as a basis for request.
-
-Biggest issue is creating a widget that interacts with federate (SSO service)
-and maintains these sessions throughout a user's lifetime. 
+Let's treat janrain as an API for interfacing between services. We are still
+waiting on janrain to return to us a working widget on our needs for SSO widget.
 
 Update
 ------
